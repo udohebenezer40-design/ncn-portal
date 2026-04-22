@@ -19,8 +19,10 @@ export default function ShortlistedRCI() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
-      <div className="bg-army-green text-white rounded-lg p-6 mb-6">
-        <h1 className="text-2xl font-bold">Supplementary Shortlisted RCI Candidates</h1>
+      <div className="rounded-lg p-6 mb-6 text-white" style={{ background: '#1B5E20' }}>
+        <h1 className="font-bold" style={{ fontSize: '1.75rem', color: '#FFFFFF' }}>
+          Shortlisted RCI Candidates
+        </h1>
         <p className="text-green-200 text-sm mt-1">Check if your name appears on the shortlist below.</p>
       </div>
 
@@ -29,7 +31,8 @@ export default function ShortlistedRCI() {
         placeholder="Search by name, NIN or state..."
         value={search}
         onChange={e => setSearch(e.target.value)}
-        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 mb-6 text-sm focus:outline-none focus:ring-2 focus:ring-army-green"
+        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 mb-6 text-sm focus:outline-none focus:ring-2 bg-white"
+        style={{ '--tw-ring-color': '#1B5E20' }}
       />
 
       {loading ? (
@@ -39,21 +42,21 @@ export default function ShortlistedRCI() {
       ) : (
         <div className="overflow-x-auto rounded-lg shadow">
           <table className="min-w-full bg-white text-sm">
-            <thead className="bg-army-dark text-white">
+            <thead className="text-white" style={{ background: '#1A1A1A' }}>
               <tr>
-                {['S/N','Full Name','State','LGA','NIN'].map(h => (
+                {['S/N', 'Full Name', 'State', 'LGA', 'NIN'].map(h => (
                   <th key={h} className="px-4 py-3 text-left font-semibold">{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
               {filtered.map((a, i) => (
-                <tr key={a.id} className="hover:bg-green-50">
+                <tr key={a.id} className="hover:bg-gray-50">
                   <td className="px-4 py-3 text-gray-500">{i + 1}</td>
-                  <td className="px-4 py-3 font-medium">{a.first_name} {a.middle_name} {a.last_name}</td>
-                  <td className="px-4 py-3">{a.state}</td>
-                  <td className="px-4 py-3">{a.lga}</td>
-                  <td className="px-4 py-3 font-mono text-xs">{a.nin}</td>
+                  <td className="px-4 py-3 font-medium text-gray-900">{a.first_name} {a.middle_name} {a.last_name}</td>
+                  <td className="px-4 py-3 text-gray-700">{a.state}</td>
+                  <td className="px-4 py-3 text-gray-700">{a.lga}</td>
+                  <td className="px-4 py-3 font-mono text-xs text-gray-600">{a.nin}</td>
                 </tr>
               ))}
             </tbody>

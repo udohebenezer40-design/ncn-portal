@@ -25,6 +25,23 @@ create table if not exists applications (
   qualification text,
   nin text unique not null,
   passport_url text,
+  -- Parent / Guardian fields
+  pg_first_name text,
+  pg_last_name text,
+  pg_other_names text,
+  pg_phone text,
+  pg_email text,
+  pg_address text,
+  pg_occupation text,
+  -- Guarantor fields
+  g_first_name text,
+  g_last_name text,
+  g_other_names text,
+  g_phone text,
+  g_email text,
+  g_service_designation text,
+  g_service_number text,
+  g_rank text,
   status text not null default 'pending' check (status in ('pending', 'shortlisted', 'rejected')),
   created_at timestamptz default now()
 );

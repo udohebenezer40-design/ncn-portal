@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+ncn-portal/client/node_modules/
+ncn-portal/server/node_modules/
+
+# Build output
+ncn-portal/client/dist/
+
+# Environment secrets — NEVER commit these
+ncn-portal/server/.env
+.env
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

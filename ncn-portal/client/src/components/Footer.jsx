@@ -1,29 +1,34 @@
 import { Link } from 'react-router-dom'
+import { AlertTriangle } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer style={{ background: 'linear-gradient(180deg, #1a4a1a 0%, #0f2e0f 100%)' }} className="text-gray-300">
-      {/* Warning box */}
-      <div className="border-t-6 px-7 py-5" style={{ background: '#049b11ff', borderColor: '#8B0000' }}>
-        <p className="text-center text-sm text-white max-w-5xl mx-auto">
-          ⚠️ <span className="font-bold">ATTENTION:</span> All submitted documents will be verified.
-          Possession of fake or forged documents will lead to <span className="font-bold underline">immediate prosecution</span> under Nigerian law.
+    <footer style={{ background: '#1B5E20' }} className="text-white">
+      {/* Warning banner */}
+      <div className="w-full py-3 px-6 flex items-start gap-3"
+        style={{ background: '#1B5E20', borderLeft: '4px solid #B71C1C' }}>
+        <AlertTriangle className="shrink-0 mt-0.5" size={18} color="#FFFFFF" strokeWidth={2} />
+        <p className="text-sm text-white">
+          <strong className="font-bold">Attention:</strong>{' '}
+          All submitted documents will be verified. Possession of fake or forged documents will lead to{' '}
+          <span className="underline font-medium" style={{ color: '#F9A825' }}>immediate prosecution</span>{' '}
+          under Nigerian law.
         </p>
       </div>
 
-      {/* Main footer */}
-      <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Main footer grid */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3 mb-3">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ifTzmBlalhC9fpDsNk_GXniJOTRm0RBcyw&s"
               alt="NCN Logo"
-              className="w-10 h-10 rounded-full object-cover"
+              className="w-10 h-10 rounded-full object-cover border-2 border-white/30"
             />
-            <span className="font-bold text-white">Nigerian Cadet Network</span>
+            <span className="font-extrabold text-white text-base">Nigerian Cadet Network</span>
           </div>
-          <p className="text-xs text-white-500 leading-relaxed">
+          <p className="text-xs text-green-200 leading-relaxed">
             Official online application portal for the Nigerian Cadet Network.
             Serving the nation through discipline, leadership, and excellence.
           </p>
@@ -31,23 +36,27 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="font-bold text-white mb-3 text-sm">Lagos State Command HQ</h3>
-          <ul className="text-xs text-white-400 space-y-2">
-            <li>📍 Cadet Base 1, Eko Immaculate International School, Lagos</li>
-            <li>📩 <a href="cadetnetworklhq@gmail.com" className="hover:text-white transition-colors">support@ncnlagos.gov.ng</a></li>
-            <li>📞 07055979130, 08168664170, 09093404489 </li>
-            <li>🕐 Mon – Fri: 8:00 AM – 4:00 PM</li>
+          <h3 className="font-bold text-white mb-3 text-sm uppercase tracking-wide">Lagos State Command HQ</h3>
+          <ul className="text-xs text-green-200 space-y-2">
+            <li>Cadet Base 1, Eko Immaculate International School, Lagos</li>
+            <li>
+              <a href="mailto:cadetnetworklhq@gmail.com" className="hover:text-white transition-colors">
+                cadetnetworklhq@gmail.com
+              </a>
+            </li>
+            <li>07055979130 · 08168664170 · 09093404489</li>
+            <li>Mon – Fri: 8:00 AM – 4:00 PM</li>
           </ul>
         </div>
 
         {/* Quick links */}
         <div>
-          <h3 className="font-bold text-white mb-3 text-sm">Quick Links</h3>
-          <ul className="text-xs text-gray-400 space-y-2">
-            <li><Link to="/apply/rri" className="hover:text-white transition-colors">→ Apply — Student Cadre (RRI)</Link></li>
-            <li><Link to="/apply/ssc-dssc" className="hover:text-white transition-colors">→ Apply — Graduate Entry</Link></li>
-            <li><Link to="/apply/nda" className="hover:text-white transition-colors">→ Apply — Professional Cadre</Link></li>
-            <li><Link to="/apply/na-band" className="hover:text-white transition-colors">→ Join the Patronate</Link></li>
+          <h3 className="font-bold text-white mb-3 text-sm uppercase tracking-wide">Quick Links</h3>
+          <ul className="text-xs text-green-200 space-y-2">
+            <li><Link to="/apply" className="hover:text-white transition-colors">→ Apply — Category A (Regular)</Link></li>
+            <li><Link to="/apply" className="hover:text-white transition-colors">→ Apply — Category B (Graduate/Cadre)</Link></li>
+            <li><Link to="/apply" className="hover:text-white transition-colors">→ Apply — Category C (Marshals)</Link></li>
+            <li><Link to="/apply" className="hover:text-white transition-colors">→ Apply — Category D (Special Marshals)</Link></li>
             <li><Link to="/shortlisted-rci" className="hover:text-white transition-colors">→ Shortlisted Candidates (RCI)</Link></li>
             <li><Link to="/login" className="hover:text-white transition-colors">→ Admin Login</Link></li>
           </ul>
@@ -55,7 +64,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs" style={{ borderColor: '#2d6e2d', color: '#a0c8a0' }}>
+      <div className="border-t px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-green-300"
+        style={{ borderColor: 'rgba(255,255,255,0.15)' }}>
         <p>© {new Date().getFullYear()} Nigerian Cadet Network. All rights reserved.</p>
         <div className="flex items-center gap-5">
           <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-white transition-colors">
@@ -67,10 +77,10 @@ export default function Footer() {
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="2"/>
               <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="2"/>
-              <circle cx="17.5" cy="6.5" r="1" />
+              <circle cx="17.5" cy="6.5" r="1"/>
             </svg>
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="X (Twitter)" className="hover:text-white transition-colors font-bold">𝕏</a>
+          <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="X (Twitter)" className="hover:text-white transition-colors font-bold">X</a>
         </div>
       </div>
     </footer>
