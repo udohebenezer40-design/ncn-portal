@@ -7,7 +7,7 @@ const fmt = (n) => '\u20A6' + n.toLocaleString()
 
 const categories = [
   {
-    slug: 'rri',
+    slug: 'rci',
     badge: 'Category A',
     title: 'Regular Intake',
     description: 'Open to all eligible Nigerian citizens',
@@ -22,7 +22,7 @@ const categories = [
     ],
     total: 25000,
     note: null,
-    route: '/apply/rri',
+    route: '/apply/rci',
   },
   {
     slug: 'ssc-dssc',

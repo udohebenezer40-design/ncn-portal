@@ -12,7 +12,7 @@ create table if not exists admins (
 -- Applications table
 create table if not exists applications (
   id uuid primary key default gen_random_uuid(),
-  cadre text not null check (cadre in ('rri', 'ssc-dssc', 'nda', 'na-band')),
+  cadre text not null check (cadre in ('rci', 'ssc-dssc', 'nda', 'na-band')),
   first_name text not null,
   last_name text not null,
   middle_name text,

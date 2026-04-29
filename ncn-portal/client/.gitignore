@@ -8,7 +8,7 @@ ncn-portal/client/dist/
 
 # Environment secrets — NEVER commit these
 ncn-portal/server/.env
-.env
+.env.production
 
 # Editor
 .vscode/

@@ -7,8 +7,8 @@ import api from '../lib/api'
 const serif = { fontFamily: "'Times New Roman', Times, serif" }
 
 const categories = {
-  rri: {
-    label: 'Category A - Regular Recruit Intake',
+  rci: {
+    label: 'Category A - Regular Cadet Intake',
     fees: [
       { item: 'Application Form (Mandatory first)', amount: 5000 },
       { item: 'Camp Fee', amount: 5000 },

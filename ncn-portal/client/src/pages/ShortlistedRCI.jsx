@@ -21,7 +21,7 @@ export default function ShortlistedRCI() {
     <div className="max-w-5xl mx-auto px-4 py-10">
       <div className="rounded-lg p-6 mb-6 text-white" style={{ background: '#1B5E20' }}>
         <h1 className="font-bold" style={{ fontSize: '1.75rem', color: '#FFFFFF' }}>
-          Shortlisted RCI Candidates
+          Shortlisted Candidates
         </h1>
         <p className="text-green-200 text-sm mt-1">Check if your name appears on the shortlist below.</p>
       </div>

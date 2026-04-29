@@ -77,7 +77,7 @@ router.get('/shortlisted/rci', async (req, res) => {
   const { data, error } = await supabase
     .from('applications')
     .select('id, first_name, middle_name, last_name, state, lga, nin')
-    .eq('cadre', 'rri')
+    .eq('cadre', 'rci')
     .eq('status', 'shortlisted')
     .order('last_name')
 

@@ -60,7 +60,7 @@ export default function Login() {
 
           <p className="text-center text-sm text-gray-500">
             Want to apply?{' '}
-            <Link to="/apply/rri" className="font-semibold hover:underline" style={{ color: '#1B5E20' }}>
+            <Link to="/apply" className="font-semibold hover:underline" style={{ color: '#1B5E20' }}>
               Start your application
             </Link>
           </p>

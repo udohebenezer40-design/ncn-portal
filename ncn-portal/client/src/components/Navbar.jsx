@@ -38,7 +38,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link to="/shortlisted-rci" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Shortlisted RCI
+              Shortlisted Candidates
             </Link>
             {token ? (
               <>
@@ -87,7 +87,7 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 px-4 pb-4 flex flex-col gap-3 text-sm font-semibold">
             <Link to="/" onClick={() => setMenuOpen(false)} className="text-gray-700 pt-3">Home</Link>
-            <Link to="/shortlisted-rci" onClick={() => setMenuOpen(false)} className="text-gray-700">Shortlisted RCI</Link>
+            <Link to="/shortlisted-rci" onClick={() => setMenuOpen(false)} className="text-gray-700">Shortlisted Candidates</Link>
             {token ? (
               <>
                 <Link to="/dashboard" onClick={() => setMenuOpen(false)} className="text-gray-700">Dashboard</Link>

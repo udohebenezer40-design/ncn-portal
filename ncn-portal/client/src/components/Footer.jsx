@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { AlertTriangle } from 'lucide-react'
+import { AlertTriangle, ShieldCheck } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -14,6 +14,38 @@ export default function Footer() {
           <span className="underline font-medium" style={{ color: '#F9A825' }}>immediate prosecution</span>{' '}
           under Nigerian law.
         </p>
+      </div>
+
+      {/* Legal Disclaimer */}
+      <div className="py-6 px-6 border-t-2 text-center" style={{ background: '#0D2110', borderColor: '#B71C1C' }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <ShieldCheck size={16} color="#1B5E20" strokeWidth={2} />
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wide">
+              Legal Notice & Public Safety Disclaimer
+            </h3>
+          </div>
+          <p className="text-xs leading-relaxed text-gray-400">
+            The Nigerian Cadet Network (NCN) is a privately registered civic organization (CAC/IT/NO:168087) operating under Nigerian law.
+            NCN is <strong className="text-gray-300">NOT</strong> a unit, branch, affiliate, or extension of the Nigerian Armed Forces, Nigerian Police Force,
+            Department of State Services (DSS), or any federal or state government security agency.
+          </p>
+          <p className="text-xs leading-relaxed text-gray-400 mt-2">
+            Membership, training, and cadet activities conducted by NCN are purely civic and voluntary in nature.
+            NCN does not guarantee employment, military commission, or government placement of any kind.
+          </p>
+          <p className="text-xs leading-relaxed text-gray-400 mt-2">
+            Members of the public are advised to exercise due diligence. The Economic and Financial Crimes Commission (EFCC) and relevant
+            authorities have been duly notified of our operations. Any individual or group falsely claiming to represent NCN for fraudulent
+            purposes will be prosecuted to the full extent of the law.
+          </p>
+          <p className="text-xs text-gray-500 mt-3">
+            For verification, contact:{' '}
+            <a href="mailto:support@ncnlagos.gov.ng" className="text-gray-400 hover:text-white underline transition-colors">
+              support@ncnlagos.gov.ng
+            </a>
+          </p>
+        </div>
       </div>
 
       {/* Main footer grid */}
@@ -57,7 +89,7 @@ export default function Footer() {
             <li><Link to="/apply" className="hover:text-white transition-colors">→ Apply — Category B (Graduate/Cadre)</Link></li>
             <li><Link to="/apply" className="hover:text-white transition-colors">→ Apply — Category C (Marshals)</Link></li>
             <li><Link to="/apply" className="hover:text-white transition-colors">→ Apply — Category D (Special Marshals)</Link></li>
-            <li><Link to="/shortlisted-rci" className="hover:text-white transition-colors">→ Shortlisted Candidates (RCI)</Link></li>
+            <li><Link to="/shortlisted-rci" className="hover:text-white transition-colors">→ Shortlisted Candidates</Link></li>
             <li><Link to="/login" className="hover:text-white transition-colors">→ Admin Login</Link></li>
           </ul>
         </div>
